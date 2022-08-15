@@ -11,4 +11,7 @@ export class ApiServices {
   login_API(data: any){
     return this.http.post('http://localhost/driveWin/laravel-api/api/v1/login',data);
   }
+  register_API(data: any){
+    return this.http.post('http://localhost/driveWin/laravel-api/api/v1/register',data);
+  }
 }

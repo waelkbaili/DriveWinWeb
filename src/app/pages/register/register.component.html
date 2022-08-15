@@ -1,2 +1,83 @@
-<p>register works!</p>
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" class="form-control" formControlName="email_value">
+      <div class="alert alert-danger" *ngIf="errorCtr['email_value'].errors?.['required']
+       && !isValid && submit">required</div>
+       <div class="alert alert-danger"*ngIf="errorCtr['email_value'].errors?.['pattern'] &&
+       !isValid && submit">invalid email</div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" formControlName="password_value" required>
+      <div class="alert alert-danger"*ngIf="errorCtr['password_value'].errors?.['required'] &&
+       !isValid && submit">required</div>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" formControlName="name_value">
+      <div class="alert alert-danger" *ngIf="errorCtr['name_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
+    <div class="form-group">
+      <label for="address">Adresse</label>
+      <input type="text" class="form-control" formControlName="address_value">
+      <div class="alert alert-danger" *ngIf="errorCtr['address_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" formControlName="username_value">
+      <div class="alert alert-danger" *ngIf="errorCtr['username_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
+    <div class="form-group">
+      <label for="BirthDate">BirthDate</label>
+      <input type="date" class="form-control" formControlName="birthDate_value">
+      <div class="alert alert-danger" *ngIf="errorCtr['birthDate_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="select">
+        <label for="permis">permis</label>
+        <mat-select class="form-control" formControlName="permis_value">
+          <mat-option value="a">Category A</mat-option>
+          <mat-option value="b">Category B</mat-option>
+          <mat-option value="d">Category D</mat-option>
+          <mat-option value="d+e">Category D+E</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="errorCtr['permis_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
 
+    <div class="form-group">
+      <mat-form-field class="select">
+        <label for="gender">Gender</label>
+        <mat-select class="form-control" formControlName="gender_value">
+          <mat-option value="m">homme</mat-option>
+          <mat-option value="f">femme</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="errorCtr['gender_value'].errors?.['required']
+       && !isValid && submit">required</div>
+    </div>
+
+    <mat-progress-spinner *ngIf="progressSpinner"
+    [color]="color"
+    [mode]="mode"
+    [value]="value">
+</mat-progress-spinner>
+
+    <div class="button">
+    <button class="btn btn-danger" type="submit">Register</button>
+    </div>
+    <mat-progress-spinner *ngIf="progressSpinner"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </mat-progress-spinner>
+  </form>
+
+  </div>

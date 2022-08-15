@@ -11,6 +11,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './pages/home/home.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +33,9 @@ import { HomeComponent } from './pages/home/home.component';
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
