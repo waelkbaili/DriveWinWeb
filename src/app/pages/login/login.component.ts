@@ -6,6 +6,7 @@ import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
   value = 100;
   progressSpinner:boolean;
 
-  constructor(public apiService: ApiServices,private formBuilder: FormBuilder,
+  constructor(public apiService: ApiServices,private formBuilder: FormBuilder,private navbar:NavbarService,
     private toastr: ToastrService,public router: Router,private localStore: LocalStorageService) {
     this.submit=false;
     this.isValid=false;
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.navbar.hide();
     if(this.localStore.getData("token") !== null){
       this.router.navigateByUrl('/home');
     }

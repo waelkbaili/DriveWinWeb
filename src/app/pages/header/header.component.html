@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" *ngIf="navbar.visible">
+  <span>
+    Drive&Win
+  </span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button>Profil</button>
+  <button mat-button>Historique</button>
+  <button mat-button>LastTrip</button>
+  <button mat-button>Controller</button>
+  <button mat-button>Settings</button>
+  <button mat-button (click)="navbar.logout()">Logout</button>
+
+</mat-toolbar>

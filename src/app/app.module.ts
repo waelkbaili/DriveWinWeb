@@ -14,6 +14,10 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import { HeaderComponent } from './pages/header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatConfirmDialogComponent } from './pages/mat-confirm-dialog/mat-confirm-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -22,7 +26,9 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    MatConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import {MatSelectModule} from '@angular/material/select';
     ToastrModule.forRoot(),
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
