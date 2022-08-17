@@ -57,22 +57,18 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/home');
         }
         else{
-          this.showSuccess(res.status);
+          this.navbar.showSuccess(res.status);
         }
       },(error: any) => {
         this.progressSpinner=false;
         console.log('error',error);
-        this.showSuccess("Something went wrong");
+        this.navbar.showSuccess("Something went wrong");
       });
     }
   }
 
   get errorCtr() {
     return this.loginForm.controls;
-  }
-
-  showSuccess(msg: string) {
-    this.toastr.error(msg);
   }
 
   tryRegister(){

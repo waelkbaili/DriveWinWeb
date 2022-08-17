@@ -3,11 +3,11 @@
     Drive&Win
   </span>
   <span class="fill-remaining-space"></span>
-  <button mat-button>Profil</button>
-  <button mat-button>Historique</button>
-  <button mat-button>LastTrip</button>
-  <button mat-button>Controller</button>
-  <button mat-button>Settings</button>
+  <button mat-button (click)="navbar.profil()">Profil</button>
+  <button mat-button (click)="navbar.historique()">Historique</button>
+  <button mat-button (click)="navbar.lastTrip()">LastTrip</button>
+  <button mat-button (click)="navbar.controller()">Controller</button>
+  <button mat-button (click)="navbar.settings()">Settings</button>
   <button mat-button (click)="navbar.logout()">Logout</button>
 
 </mat-toolbar>

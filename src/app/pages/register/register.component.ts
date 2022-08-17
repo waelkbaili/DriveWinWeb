@@ -66,12 +66,12 @@ export class RegisterComponent implements OnInit {
           this.router.navigateByUrl('/login');
         }
         else{
-          this.showSuccess(res.status);
+          this.navbar.showSuccess(res.status);
         }
       },(error: any) => {
         this.progressSpinner=false;
         console.log('error',error);
-        this.showSuccess("Something went wrong");
+        this.navbar.showSuccess("Something went wrong");
       });
     }
   }
@@ -79,7 +79,5 @@ export class RegisterComponent implements OnInit {
   get errorCtr() {
     return this.registerForm.controls;
   }
-  showSuccess(msg: string) {
-    this.toastr.error(msg);
-  }
+
 }

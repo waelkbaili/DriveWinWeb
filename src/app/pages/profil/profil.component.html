@@ -1,0 +1,23 @@
+<body>
+  <mat-progress-spinner *ngIf="progressSpinner"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </mat-progress-spinner>
+<div class="float-container" *ngIf="getData">
+  <div class="float-child1" >
+      <img src="{{ imageUrl }}">
+  </div>
+  <div class="float-child2" >
+      <h2>Informations personlelles</h2>
+      <h6>Email : {{ users[0].email }}</h6>
+      <h6>Addresse : {{ users[0].address }}</h6>
+      <h6>Birth Date : {{ users[0].dateBirth }}</h6>
+      <h6>Gendre : {{ users[0].gender }}</h6>
+      <h6>Name : {{ users[0].name }}</h6>
+      <h6>Permis : {{ users[0].permis }}</h6>
+      <h6>Username : {{ users[0].username }}</h6>
+  </div>
+</div>
+
+</body>

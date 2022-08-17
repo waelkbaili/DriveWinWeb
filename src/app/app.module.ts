@@ -18,6 +18,12 @@ import { HeaderComponent } from './pages/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatConfirmDialogComponent } from './pages/mat-confirm-dialog/mat-confirm-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ProfilComponent } from './pages/profil/profil.component';
+import { HistoriqueComponent } from './pages/historique/historique.component';
+import { ControllerComponent } from './pages/controller/controller.component';
+import { MatButtonModule } from '@angular/material/button';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { LastTripComponent } from './pages/last-trip/last-trip.component';
 
 
 
@@ -28,7 +34,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     RegisterComponent,
     HomeComponent,
     HeaderComponent,
-    MatConfirmDialogComponent
+    MatConfirmDialogComponent,
+    ProfilComponent,
+    HistoriqueComponent,
+    ControllerComponent,
+    SettingsComponent,
+    LastTripComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatSelectModule,
     MatToolbarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
